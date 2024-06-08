@@ -1,0 +1,24 @@
+@startuml
+skinparam backgroundColor #F9F9F9
+skinparam handwritten false
+skinparam shadowing false
+skinparam state {
+  BackgroundColor LightYellow
+  BorderColor Black
+  FontStyle bold
+}
+
+' left to right direction
+
+
+[*] --> QuestionRouting : User asks question
+QuestionRouting : Entry/Perform initial routing
+QuestionRouting --> TransformQuestion : More context needed for answer
+QuestionRouting --> GenerateReport : Context already known, generate report
+TransformQuestion : Transform user question to for web search
+TransformQuestion --> WebSearch : Send to web search for information
+WebSearch : Uses web search to find information, for example, Google or Bing
+WebSearch --> GenerateReport : Search complete, provides context for answer
+GenerateReport : Generate report based on user question and context
+
+@enduml

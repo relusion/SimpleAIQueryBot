@@ -24,6 +24,7 @@ namespace Agents
         - Require more context for a better answer
         - Are about recent events
         - Involve future predictions or forecasts
+        - Ask about specific entities or events that likely need recent or detailed information
 
         Return the JSON with a single key "action" without any preamble or explanation. Always return only JSON data without any formatting or markdown.
 
@@ -31,7 +32,6 @@ namespace Agents
         {"action":"ContextRequired"}
         {"action":"NoContextRequired"}
         Question to route: {{$question}}
-
         """;
 
         Kernel _kernel;

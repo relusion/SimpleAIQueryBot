@@ -5,13 +5,14 @@ namespace SimpleAIQueryBot.Tools
 {
     public class SemanticKernelConfig
     {
+        private static readonly HttpClient httpClient = new HttpClient()
+        {
+            // if local LLM is very slow to response increaase it to a bigger > 200 value
+            Timeout = TimeSpan.FromSeconds(600)
+        };
+
         public static Kernel CreateKernel()
         {
-            HttpClient httpClient = new HttpClient
-            {
-                Timeout = TimeSpan.FromSeconds(600)
-            };
-
             var builder = Kernel.CreateBuilder();
 
             var openAIKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
@@ -37,6 +38,6 @@ namespace SimpleAIQueryBot.Tools
 
             return builder.Build();
         }
-        
+
     }
 }

@@ -11,7 +11,7 @@ var bot = new Chatbot();
 
 void OnBotStateChange(State newState, QueryContext newContext)
 {
-    ConsoleTools.PrintIndentedAndColored($"Switched To State: {newState}", 5, ConsoleColor.Blue, ConsoleColor.Black);
+    ConsoleTools.PrintIndentedAndColored($"Switched To State: {newState}", 5, ConsoleColor.Green, ConsoleColor.Black);
 }
 
 while (true)

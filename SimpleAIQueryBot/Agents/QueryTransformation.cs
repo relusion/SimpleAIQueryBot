@@ -14,7 +14,7 @@ namespace SimpleAIQueryBot.Agents
     Web Search Expression:
     "Implement Kubernetes in Azure security best practices"
     
-    Return the JSON with single key "search_query" with no premable or explanation.
+    Return the JSON with single key "search_query" with no preamble or explanation.
     You always return only JSON data without any formatting or markdown.
     Examples:
     {"search_query":"Implement Kubernetes in Azure security best practices"}    

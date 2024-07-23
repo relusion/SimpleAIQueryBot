@@ -11,6 +11,12 @@ var bot = new Chatbot();
 
 void OnBotStateChange(State newState, QueryContext newContext)
 {
+     if(newState == State.LookupData)
+    {
+        // user query transformed to a data lookup
+        ConsoleTools.PrintIndentedAndColored($"TransformedQuery: {newContext.TransformedQuery}", 6, ConsoleColor.Yellow, ConsoleColor.Black);        
+    }
+
     ConsoleTools.PrintIndentedAndColored($"Switched To State: {newState}", 5, ConsoleColor.Green, ConsoleColor.Black);
 }
 

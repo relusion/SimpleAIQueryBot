@@ -21,7 +21,7 @@ while (true)
 
     if (userInput.ToLower() == "exit")
     {
-        Console.WriteLine("Chatbot: Goodbye!f");
+        Console.WriteLine("Chatbot: Goodbye!");
         break;
     }
 
